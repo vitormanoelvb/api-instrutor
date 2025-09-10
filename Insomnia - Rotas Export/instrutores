@@ -1,0 +1,206 @@
+type: collection.insomnia.rest/5.0
+name: Instrutores
+meta:
+  id: wrk_40af2f21dc034f14925d648261248f72
+  created: 1755372852388
+  modified: 1755372879722
+  description: ""
+collection:
+  - url: "{{ _[''].base_url }}/instrutores"
+    name: Listar todos os instrutores
+    meta:
+      id: req_446b49d00685489a9eb9b7f5b332d650
+      created: 1755372852518
+      modified: 1755484432777
+      isPrivate: false
+      description: ""
+      sortKey: -1755372852519
+    method: GET
+    parameters:
+      - id: pair_d39f409cf49541a89e3c6fe61434269b
+        name: ""
+        value: ""
+        description: ""
+        disabled: false
+    headers:
+      - name: User-Agent
+        value: insomnia/11.2.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ _[''].base_url }}/instrutores"
+    name: Cadastrar instrutor
+    meta:
+      id: req_6bb648af00de4c6a8985d238196adbb2
+      created: 1755373726229
+      modified: 1755996782422
+      isPrivate: false
+      description: ""
+      sortKey: -1755373726229
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        		"registro": "B183",
+        		"nome": "MARCONE",
+        		"cpf": "123.256.789-01",
+        		"email": "marcos@exemplo.com",
+        		"dataNascimento": "2001-01-21",
+        		"telefone": "(33) 99999-8838",
+        		"turmas": []
+        	}
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.2.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ _[''].base_url }}/instrutores/registro/B183"
+    name: Buscar instrutor por registro
+    meta:
+      id: req_65c19800faaf40d3b5af0bb4cc8606e4
+      created: 1755375078663
+      modified: 1755459963875
+      isPrivate: false
+      description: ""
+      sortKey: -1755375078663
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.2.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ _[''].base_url }}/instrutores/cpf/:123.456.789-01"
+    name: Buscar instrutor por CPF
+    meta:
+      id: req_cbeb4d6593e246a2b53a0559eb22ffee
+      created: 1755375645658
+      modified: 1755459969027
+      isPrivate: false
+      description: ""
+      sortKey: -1755375645658
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.2.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+    pathParameters:
+      - name: 123.456.789-01
+        value: ""
+  - url: "{{ _[''].base_url }}/instrutores/nome?q=MARCONE"
+    name: Buscar instrutor por nome
+    meta:
+      id: req_f40f355f39294347bc809304e25ab2bd
+      created: 1755376017539
+      modified: 1755996761839
+      isPrivate: false
+      description: ""
+      sortKey: -1755376017539
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.2.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ _[''].base_url }}/instrutores/B183"
+    name: Alterar dados do instruto
+    meta:
+      id: req_0248b092b2ab452199f25a3cbba4586c
+      created: 1755376571840
+      modified: 1755996720690
+      isPrivate: false
+      description: ""
+      sortKey: -1755376571840
+    method: PATCH
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        		"registro": "B183",
+        		"nome": "MARCONE NUNES",
+        		"email": "marcosnunes@gmail.com",
+        		"dataNascimento": "2001-05-21",
+        		"telefone": "(33) 99999-8838"
+        	}
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.2.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ _[''].base_url }}/instrutores/A123"
+    name: Deletar instrutor
+    meta:
+      id: req_acaeabd9268146d4addb3108592c92df
+      created: 1755388781961
+      modified: 1755476650985
+      isPrivate: false
+      description: ""
+      sortKey: -1755388781961
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/11.2.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_b6cc335cb750f65ebe42498e06316cb02ddd71e7
+    created: 1755372852395
+    modified: 1755372852395
+environments:
+  name: Base Environment
+  meta:
+    id: env_b6cc335cb750f65ebe42498e06316cb02ddd71e7
+    created: 1755372852392
+    modified: 1755372905302
+    isPrivate: false
+  data:
+    "":
+      base_url: http://localhost:3000

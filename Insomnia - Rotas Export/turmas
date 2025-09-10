@@ -1,0 +1,147 @@
+type: collection.insomnia.rest/5.0
+name: Turmas
+meta:
+  id: wrk_9bd5698c4bf747f29bf48ad545f4feea
+  created: 1755396610176
+  modified: 1755396610176
+  description: ""
+collection:
+  - url: "{{ _[''].base_url }}/turmas"
+    name: Listar todas as turmas
+    meta:
+      id: req_cf514d79cef34bda86e528dd4e07a7b0
+      created: 1755396741680
+      modified: 1755484344558
+      isPrivate: false
+      description: ""
+      sortKey: -1755396741680
+    method: GET
+    parameters:
+      - id: pair_7ed00ac5bccf441192e5d5b07b42d67e
+        name: turno
+        value: Manhã
+        description: ""
+        disabled: true
+      - id: pair_f25afec4702a40fc913490b78d9b62e1
+        name: turno
+        value: Tarde
+        description: ""
+        disabled: true
+      - id: pair_699181913a694231b22ce643e757c81b
+        name: turno
+        value: Noite
+        description: ""
+        disabled: true
+    headers:
+      - name: User-Agent
+        value: insomnia/11.2.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ _[''].base_url }}/turmas/1"
+    name: Buscar turma por id
+    meta:
+      id: req_bc7d3b91112c45efbcfdc60c535d87d5
+      created: 1755397067882
+      modified: 1755483407556
+      isPrivate: false
+      description: ""
+      sortKey: -1755397067882
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.2.0
+        id: pair_52413c05ed8a4cf184a08a491bd6778c
+      - id: pair_8452e6e4c6d642818de1442e087d4092
+        name: x-auth
+        value: admin
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ _[''].base_url }}/turmas"
+    name: Cadastrar turma
+    meta:
+      id: req_c266445a8ee74287b979dd10390c2e25
+      created: 1755397480028
+      modified: 1755484370637
+      isPrivate: false
+      description: ""
+      sortKey: -1755397480028
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "codigo": "T-10",
+          "nome": "Natação I",
+          "turno": "Noite"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.2.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ _[''].base_url }}/turmas/2"
+    name: Deletar turma
+    meta:
+      id: req_5472093827fd4414adc8add86dd08a14
+      created: 1755397825342
+      modified: 1755460205331
+      isPrivate: false
+      description: ""
+      sortKey: -1755397825342
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/11.2.0
+        id: pair_fb1a815d3517484badf8aeac7e91e34c
+      - id: pair_a04b51616f1048d48db62ba82d798106
+        name: x-auth
+        value: admin
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_8507b08373fa630b962fd29b9ee3301eff08b396
+    created: 1755396610192
+    modified: 1755396610192
+environments:
+  name: Base Environment
+  meta:
+    id: env_8507b08373fa630b962fd29b9ee3301eff08b396
+    created: 1755396610183
+    modified: 1755396924731
+    isPrivate: false
+  data:
+    "":
+      base_url: http://localhost:3000
+      auth_token: admin
